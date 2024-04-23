@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_bg_color"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="2"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="3"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad4"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="4"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad5"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="5"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="6"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad7"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="7"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad8"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="8"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad9"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="9"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipadLeft"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="*"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/digipad0"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32" />
+
+        <RelativeLayout
+            android:id="@+id/digipadRight"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/space_tiny"
+            android:paddingEnd="@dimen/space_tiny"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_32">
+
+            <ImageView
+                android:id="@+id/imageDelete"
+                android:layout_width="@dimen/space_32"
+                android:layout_height="@dimen/space_32"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="Backspace"
+                android:src="@drawable/back_fcon_pin"
+                app:tint="#000000" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

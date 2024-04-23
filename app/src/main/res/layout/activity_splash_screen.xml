@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_bg_splash" />
+
+    <ImageView
+        android:id="@+id/imgAppLogog"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:src="@drawable/img_small_logo" />
+
+    <TextView
+        android:id="@+id/txtText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAppLogog"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="All Video"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_26sdp" />
+
+    <RelativeLayout
+        android:id="@+id/realtiveHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtText1"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_minus3sdp">
+
+        <RelativeLayout
+            android:id="@+id/topView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp">
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorYellow" />
+
+            <TextView
+                android:id="@+id/txtText11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_minus6sdp"
+                android:fontFamily="@font/rubik_bold"
+                android:gravity="bottom"
+                android:text="Downloader"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_30sdp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/txtText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:selectAllOnFocus="true"
+            android:text="Developed by"
+            android:textColor="#7f4500"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/txtCompnayname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtText2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="center"
+            android:text="Code Studio"
+            android:textColor="@color/subTextColor"
+            android:textSize="@dimen/_14sdp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/prog"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/realtiveHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:indeterminateTint="@android:color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:text="No Internet Connection"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/txtOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="Retry"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

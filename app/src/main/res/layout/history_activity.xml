@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/realtiveTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/imgBackPress"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:gravity="left|center_vertical|center_horizontal|center|start"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/fcon_arrow_back_24"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/imgBackPress"
+            android:fontFamily="@font/rubik_medium"
+            android:text="History"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ad_holder"
+        android:layout_below="@+id/realtiveTop"
+        android:scrollbars="vertical"
+        tools:itemCount="10"
+        tools:listitem="@layout/row_history" />
+
+    <include
+        android:id="@+id/relative_error"
+        layout="@layout/lay_for_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ad_holder"
+        android:layout_below="@+id/realtiveTop"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ad_holder"
+        layout="@layout/view_for_emply_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+</RelativeLayout>

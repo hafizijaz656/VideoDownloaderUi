@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#ffffff</color>
+    <color name="purple_500">#ffffff</color>
+    <color name="purple_700">#ffffff</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="status_bar">#F5F5F5</color>
+
+    <color name="app_black">#282828</color>
+    <color name="app_text">#616f78</color>
+    <color name="dark_text_color">#4a5663</color>
+    <color name="card_bg_color">#f6f6f6</color>
+    <color name="colorAccent">#2d2d2d</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorYellow">#ff8a00</color>
+    <color name="color_bgbg">#f2f3f5</color>
+    <color name="color_bottom_icon">#373738</color>
+    <color name="color_dark_bg">#373738</color>
+    <color name="color_fb">#375697</color>
+    <color name="color_insta">#b42678</color>
+    <color name="color_light_gray">#f0f2f7</color>
+    <color name="color_normla">#303030</color>
+    <color name="color_search">#f0f2f7</color>
+    <color name="color_social_text">#4c4c4c</color>
+    <color name="color_tab_selected">#f0f0f0</color>
+    <color name="colorbg">#ffffff</color>
+    <color name="com_facebook_blue">#1877f2</color>
+    <color name="com_smart_login_code">#3c6499</color>
+    <color name="ghostWhite">#f9f9fb</color>
+    <color name="grey">#eeeeee</color>
+    <color name="inactivePinFieldColor">#808080</color>
+    <color name="md_divider">#1f000000</color>
+    <color name="palletBlue">#cfd8dd</color>
+    <color name="pinFieldLibraryAccent">#ff4081</color>
+    <color name="pinFieldLibraryTransparent">#00000000</color>
+    <color name="subTextColor">#b4b4b4</color>
+    <color name="sub_textcolor">#95a5a6</color>
+    <color name="textColor">#333333</color>
+
+</resources>

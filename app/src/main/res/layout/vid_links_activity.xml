@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:elevation="0dp"
+        app:popupTheme="@style/Theme.AllVideoDownUI.PopupOverlay" />
+
+    <RelativeLayout
+        android:id="@+id/topimgrelative"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/imgMainVideoThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/net_plceholder" />
+
+        <TextView
+            android:id="@+id/txtVidLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="#aa000000"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_1sdp"
+            android:textColor="@color/ghostWhite"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtMainTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="#aa111111"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:textColor="@color/ghostWhite"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/notetxt"
+        android:layout_below="@+id/topimgrelative"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/relative_error"
+        layout="@layout/lay_for_error_custom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnForDownload"
+        android:layout_below="@+id/topimgrelative"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/cardLoaindView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notetxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/vf"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_toEndOf="@+id/vf"
+            android:gravity="center"
+            android:text="Loading other video formats…"
+            android:textColor="@color/color_social_text"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/notetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnForDownload"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Note:- You can&apos;t download videos restricted by website owner or some private videos as per their content policy."
+        android:textSize="@dimen/_11sdp" />
+
+    <LinearLayout
+        android:id="@+id/btnForDownload"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_above="@+id/ad_holder"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:background="@drawable/button_dialog_solid_bg_view"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Tap to Download"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ad_holder"
+        layout="@layout/view_for_emply_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+</RelativeLayout>

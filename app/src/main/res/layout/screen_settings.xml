@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AllVideoDownUI.PopupOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Theme.AllVideoDownUI.PopupOverlay"
+            app:contentInsetEnd="0dp"
+            app:title="Settings"
+            app:navigationIcon="@drawable/image_p_backasd"
+            app:contentInsetEndWithActions="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/nest_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/realtiveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp">
+
+            <RelativeLayout
+                android:id="@+id/realtiveAdBlocker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgAdBlocker"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/image_blockads"
+                    app:tint="#4c4c4c" />
+
+                <TextView
+                    android:id="@+id/txtAdBlocker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/imgAdBlocker"
+                    android:text="Ad Blocker"
+                    android:textColor="@color/color_dark_bg"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.github.angads25.toggle.widget.LabeledSwitch
+                    android:id="@+id/SwitchAdBlocker"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_9sdp"
+                    app:colorBorder="@color/color_dark_bg"
+                    app:colorOn="@color/colorAccent"
+                    app:on="true"
+                    app:textOff=""
+                    app:textOn="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtiveclearData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realtiveAdBlocker"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgclearData"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/image_clearcache"
+                    app:tint="#4c4c4c" />
+
+                <TextView
+                    android:id="@+id/txtclearData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/imgclearData"
+                    android:text="Clear Cache"
+                    android:textColor="@color/color_dark_bg"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtiveHowUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realtiveclearData"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgHowUse"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/fcon_data_howtodownload"
+                    app:tint="#4c4c4c" />
+
+                <TextView
+                    android:id="@+id/txtHowUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/imgHowUse"
+                    android:text="How to Download"
+                    android:textColor="@color/color_dark_bg"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtivePrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realtiveHowUse"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgPrivacyPolicy"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/icon_policy"
+                    app:tint="#4c4c4c" />
+
+                <TextView
+                    android:id="@+id/txtPrivacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/imgPrivacyPolicy"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/color_dark_bg"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtiveAppFeedBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realtivePrivacyPolicy"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgAppFeedBack"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/loader_ic_rateus"
+                    app:tint="#4c4c4c" />
+
+                <TextView
+                    android:id="@+id/txtAppFeedBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/imgAppFeedBack"
+                    android:text="Rate Us"
+                    android:textColor="@color/color_dark_bg"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtiveShareApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/realtiveAppFeedBack"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/imgShareApp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/latest_sjhare_app"
+                    app:tint="#4c4c4c" />
+
+                <TextView
+                    android:id="@+id/txtShareApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/imgShareApp"
+                    android:text="Share App"
+                    android:textColor="@color/color_dark_bg"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
